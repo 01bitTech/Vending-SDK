@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/controller_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="驱动版本: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="温度: --"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/door_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/key_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="按键: "
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <Button
+            android:id="@+id/all_motor_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="整机测试" />
+
+        <TextView
+            android:id="@+id/all_motor_test_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="22sp"
+            tools:text="共测试成功货道: 36个" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/motor_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="地址"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+        <EditText
+            android:id="@+id/updown_hight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="升降高度"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+        <EditText
+            android:id="@+id/motor_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="测试货道序号(非行列编号)"
+            android:inputType="number"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+
+        <Button
+            android:id="@+id/motor_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="确定" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/ir_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="IR Switch"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
